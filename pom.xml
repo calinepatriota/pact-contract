@@ -13,6 +13,31 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 	</properties>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>au.com.dius.pact.provider</groupId>
+				<artifactId>maven</artifactId>
+				<version>${pact.version}</version>
+				<configuration>
+					<serviceProviders>
+						<serviceProvider>
+							<name>Tasks</name>
+							<protocol>http</protocol>
+							<host>localhost</host>
+							<port>8000</port>
+							<path>/</path>
+						</serviceProvider>
+					</serviceProviders>
+					<pactBrokerUrl>http://localhost:9080</pactBrokerUrl>
+					<pactBrokerUsername>user1</pactBrokerUsername>
+					<pactBrokerPassword>userpasswd</pactBrokerPassword>
+					<trimSnapshot>true</trimSnapshot>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 	<dependencies>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>

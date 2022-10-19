@@ -1,0 +1,5 @@
+br/pact/consumer/tasks/service/TasksConsumer.class
+br/pact/consumer/utils/RequestHelper.class
+br/pact/consumer/barriga/service/BarrigaConsumer.class
+br/pact/consumer/barriga/desktop/BarrigaDesktop.class
+br/pact/consumer/tasks/model/Task.class
